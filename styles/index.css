@@ -1,0 +1,194 @@
+/* Body styling */
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: white;
+    user-select: none;
+    background-image: url("https://img.freepik.com/premium-photo/restaurant-kitchen-2d-background-environment-mobile-game-high-quality-horizontal-background-landscape-gaming-template-design-location-generative-ai_159242-19388.jpg?w=900");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+ 
+}
+
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+
+.left h3 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 50px;
+    background-color: rgb(250, 250, 250);
+    border-radius: 50px;
+    width: 100px;
+    color: black;
+    border: 4px solid rgb(182, 80, 13);
+}
+
+
+.coffe-img {
+    width: 300px;
+}
+
+.coffe-img:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.coffe-img:active {
+    opacity: 0.8;
+    transform: scale(1.02);
+}
+
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 300px; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 20px;
+    border-radius: 10px;
+    right: 0;
+    position: absolute;
+    top: 0;
+}
+
+
+
+
+.upgrade {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    border: 4px solid rgb(185, 117, 27);
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.945);
+    color: black;
+    cursor: pointer;
+    
+}
+
+.upgrade:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.upgrade:active {
+    
+    transform: scale(1.01);
+}
+
+
+.mid-section h4 {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.mid-section p {
+    margin: 0;
+}
+
+.upgrade-img {
+    width: 55px;
+}
+
+.coco-img {
+    width: 20px;
+    height: 20px;
+}
+
+.cost-info {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+
+.next-level-info {
+    position: absolute;
+    right: 350px;
+    background-color: rgba(54, 54, 54, 0.548);
+    height: 80px;
+    width: 100px;
+    text-align: center;
+    display: none;
+    color: aliceblue;
+}
+
+.upgrade:hover .next-level-info {
+    display: block;
+}
+
+
+.buy-button {
+    padding: 10px 20px;
+    background-color: rgb(209, 69, 13);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: rgb(185, 117, 27);
+}
+
+.buy-button:active {
+    transform: scale(0.98);
+}
+
+
+
+.progress-container {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  progress {
+    width: 100%;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #ccc;
+  }
+  
+  progress::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 10px;
+  }
+  
+  progress::-webkit-progress-value {
+    background-color: #8b4513;
+    border-radius: 10px;
+  }
+  

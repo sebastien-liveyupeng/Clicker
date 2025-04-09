@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/profil.css">
+    <link rel="stylesheet" href="./styles/cacaoeffect.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   
+    <link rel="stylesheet" href="./styles/pop-up.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <title>Clicker</title>
+</head>
+<body>
+
+   
+    
+  
+    
+    <section id="stats" class="stats">
+        <h2 style="font-size: 50px; color: aliceblue;">Stats</h2>
+        <p><strong>Café actuel : </strong><span id="currentCoffe" style="color: aliceblue;">0</span></p>
+        <p><strong>Café total produit : </strong><span id="totalCoffe" style="color: aliceblue;">0</span></p>
+        <p><strong>Café dépensé : </strong><span id="spentCoffe" style="color: aliceblue;">0</span></p>
+    </section>
+
+    
+    <section>
+        <div class="main">
+            <div class="left">
+                <h3> 
+                    <span class="coffe-cost"> 0 </span> 
+                </h3>
+                <div class="coffee-effect-container">
+                   
+                    <img src="./assets/cafe.webp" alt="cafe" onclick="createCacaoEffect(); incrementCoffe();" class="coffe-img" draggable="false">
+                    
+                   
+                    <div class="cacao-effect"></div>
+                </div>
+            </div>
+            
+
+            <div class="right">
+                <H1>BOUTIQUE</H1>
+<!-----------------------1er item---------------------------------->
+            <div class="upgrade" onclick="buyClicker()">
+                    <div class="left-section">
+                            <img src="./assets/clicker.png" alt="" class="upgrade-img">
+                    </div>
+                    <div class="mid-section">
+                          <h4>Clicker</h4>
+                          <div class="cost-info">
+                            <p>Cost : <span class="clicker-cost"> 10 </span></p>
+                            <img src="./assets/dollars.jpg" alt="coffee" class="coco-img" style="border-radius: 50px;">
+                          </div>
+                    </div>
+                    <div class="right-section">
+                        level     <span class="clicker-level">  0 </span>
+                    </div>
+                    <div class="next-level-info">
+                       +<span class="clicker-increase">1</span>  coffee <br/> per second
+                    </div>
+             </div>
+<!-----------------------1er item---------------------------------->
+
+<!-----------------------2eme item---------------------------------->
+             <div class="upgrade" onclick="buyWater()">
+                <div class="left-section">
+                        <img src="./assets/eau.png" alt="" class="upgrade-img">
+                </div>
+                <div class="mid-section">
+                      <h4>Water</h4>
+                      <div class="cost-info">
+                        <p>Cost : <span class="Water-cost"> 13 </span></p>
+                        <img src="./assets/dollars.jpg" alt="coffee" class="coco-img" style="border-radius: 50px";>
+                      </div>
+                </div>
+                <div class="right-section">
+                    level     <span class="Water-level">  0 </span>
+                </div>
+                <div class="next-level-info">
+                   +<span class="Water-increase">4</span>  coffee <br/> per second
+                </div>
+         </div>
+<!-----------------------2eme item---------------------------------->
+<!-----------------------3eme item---------------------------------->
+<div class="upgrade" onclick="buyChamp()">
+    <div class="left-section">
+            <img src="./assets/champ.jpg" alt="" class="upgrade-img">
+    </div>
+    <div class="mid-section">
+          <h4>Champ</h4>
+          <div class="cost-info">
+            <p>Cost : <span class="Champ-cost"> 50 </span></p>
+            <img src="./assets/dollars.jpg" alt="coffee" class="coco-img" style="border-radius: 50px";>
+          </div>
+    </div>
+    <div class="right-section">
+        level     <span class="Champ-level">  0 </span>
+    </div>
+    <div class="next-level-info">
+       +<span class="Champ-increase">4</span>  coffee <br/> per second
+    </div>
+</div>
+<!-----------------------3eme item---------------------------------->
+
+<!-----------------------4eme item---------------------------------->
+<div class="upgrade" onclick="buyFactory()">
+    <div class="left-section">
+            <img src="./assets/factory.jpg" alt="" class="upgrade-img">
+    </div>
+    <div class="mid-section">
+          <h4>Factory</h4>
+          <div class="cost-info">
+            <p>Cost : <span class="Factory-cost"> 100 </span></p>
+            <img src="./assets/dollars.jpg" alt="coffee" class="coco-img" style="border-radius: 50px";>
+          </div>
+    </div>
+    <div class="right-section">
+        level     <span class="Factory-level">  0 </span>
+    </div>
+    <div class="next-level-info">
+       +<span class="Factory-increase">4</span>  coffee <br/> per second
+    </div>
+</div>
+<!-----------------------4me item----------------------
+--------------------------------------------------------
+<h2>Skins</h2>
+  
+<div class="upgrade" onclick="buySkin()">
+    <div class="left-section">
+        <img src="./assets/putin.jpg" alt="Skin 1" class="upgrade-img">
+    
+    </div>
+    <div class="mid-section">
+        <h4>Putin's Skin <i class="fas fa-star"></i>
+        </h4>
+        <div class="cost-info">
+            <p>Cost : <span class="Skin-cost"> 1  </span></p>
+            <img src="./assets/dollars.jpg" alt="coffee" class="coco-img" style="border-radius: 50px";>
+            
+        </div>
+    </div>
+    <div class="right-section">
+        level <span class="Skin-level"> 0 </span>
+    </div>
+    <div class="next-level-info">
+       Change coffee image
+    </div>
+</div>
+
+
+
+
+<div id="game-popup" class="game-popup">
+    <div class="popup-content">
+      
+        <p id="popup-message">NO cash to buy coffee for Mister Putin!</p>
+        <button id="popup-close-btn" class="popup-close-btn">Fermer</button>
+    </div>
+</div>
+
+
+<div class="upgrade" onclick="buySkinCoffee2()">
+    <div class="left-section">
+        <img src="./assets/skin2.png" alt="SkinCoffee 2" class="upgrade-img">
+    </div>
+    <div class="mid-section">
+        <h4>Cappuccino Skin </h4>
+        <div class="cost-info">
+            <p>Cost : <span class="SkinCoffee2-cost"> 8 </span></p>
+            <img src="./assets/dollars.jpg" alt="coffee" class="coco-img" style="border-radius: 50px";>
+        </div>
+    </div>
+    <div class="right-section">
+        level <span class="SkinCoffee2-level"> 0 </span>
+    </div>
+    <div class="next-level-info">
+        Change coffee image
+    </div>
+</div>
+
+    
+
+<div class="upgrade" onclick="buySkinCoffee3()">
+    <div class="left-section">
+        <img src="./assets/skin3.png" alt="SkinCoffee 3" class="upgrade-img">
+    </div>
+    <div class="mid-section">
+        <h4>Coffee Vanilla </h4>
+        <div class="cost-info">
+            <p>Cost : <span class="SkinCoffee3-cost"> 5 000</span></p>
+            <img src="./assets/dollars.jpg" alt="coffee" class="coco-img" style="border-radius: 50px;">
+        </div>
+    </div>
+    <div class="right-section">
+        level <span class="SkinCoffee3-level"> 0 </span>
+    </div>
+    <div class="next-level-info">
+        Change coffee image
+    </div>
+</div>
+
+<div class="upgrade" onclick="buySkinCoffee4()">
+    <div class="left-section">
+        <img src="./assets/skin4.png" alt="SkinCoffee 4" class="upgrade-img">
+    </div>
+    <div class="mid-section">
+        <h4>Coffee Vanilla </h4>
+        <div class="cost-info">
+            <p>Cost : <span class="SkinCoffee4-cost"> 5 </span></p>
+            <img src="./assets/dollars.jpg" alt="coffee" class="coco-img" style="border-radius: 50px";>
+        </div>
+    </div>
+   
+    <div class="next-level-info">
+        Change coffee image
+    </div>
+</div>
+<!-----------------------Skins 4---------------------------------->
+
+
+
+
+            </div>
+        </div>
+
+    </section>
+    <script src="./js/index.js"></script>
+</body>
+</html>
